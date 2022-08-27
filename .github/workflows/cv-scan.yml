@@ -31,3 +31,12 @@ jobs:
       - name: Test to check for CVEs for Python requirements and HTML report dependencies
         run: |  
           cve-bin-tool -n json -i test-cve.json
+      
+      - name: Upload report as an artifact
+#        This will upload generated report as an GitHub artifact which you can download later.
+        uses: actions/upload-artifact@v2
+        with:
+          name: cve_report
+          path: 'cve-bin-tool-report.html'
+  
+      
