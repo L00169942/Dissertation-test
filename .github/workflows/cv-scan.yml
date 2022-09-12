@@ -1,4 +1,4 @@
-name: CVE scan new
+name: CVE scan new 1
 
 on:
   push:
